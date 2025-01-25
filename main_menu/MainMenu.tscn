@@ -1,0 +1,69 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnu1kjedr5ibs"]
+
+[ext_resource type="Script" path="res://main_menu/main_menu.gd" id="1_fw2vf"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fw2vf")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+stretch_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="Title" type="CenterContainer" parent="."]
+layout_direction = 1
+layout_mode = 2
+offset_left = 487.0
+offset_top = 88.0
+offset_right = 614.0
+offset_bottom = 132.0
+
+[node name="Title" type="Label" parent="Title"]
+layout_direction = 1
+layout_mode = 2
+text = "Mobile Supreme"
+
+[node name="MenuHolder" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 483.0
+offset_right = 171.0
+offset_bottom = 619.0
+
+[node name="MenuItems" type="VBoxContainer" parent="MenuHolder"]
+z_index = 1
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+metadata/_edit_lock_ = true
+
+[node name="Start" type="Button" parent="MenuHolder/MenuItems"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../Exit")
+text = "Start"
+
+[node name="Continue" type="Button" parent="MenuHolder/MenuItems"]
+layout_mode = 2
+text = "Continue"
+
+[node name="Settings" type="Button" parent="MenuHolder/MenuItems"]
+layout_mode = 2
+text = "Settings"
+
+[node name="Exit" type="Button" parent="MenuHolder/MenuItems"]
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../Start")
+text = "Exit"
+
+[connection signal="pressed" from="MenuHolder/MenuItems/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="MenuHolder/MenuItems/Settings" to="." method="_on_Settings_pressed"]
+[connection signal="pressed" from="MenuHolder/MenuItems/Exit" to="." method="_on_Exit_pressed"]
