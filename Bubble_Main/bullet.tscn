@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://p1ibv7vaql0d"]
+
+[ext_resource type="Texture2D" uid="uid://usq1ovgl1k6l" path="res://Images/Bubble.png" id="1_h20yp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_47815"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_h20yp")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -4)
+shape = SubResource("CircleShape2D_47815")
