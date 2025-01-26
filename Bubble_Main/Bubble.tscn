@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbgkvpk4l2rgc"]
+
+[ext_resource type="Script" path="res://Scripts/playermove.gd" id="1_inceh"]
+[ext_resource type="Texture2D" uid="uid://dn6df66k7axp3" path="res://Images/buuble.png" id="2_4jpvu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_obl68"]
+radius = 53.0377
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_inceh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.992, 1)
+texture = ExtResource("2_4jpvu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_obl68")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0, -59)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

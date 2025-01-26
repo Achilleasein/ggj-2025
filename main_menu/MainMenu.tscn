@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dnu1kjedr5ibs"]
+[gd_scene load_steps=3 format=3 uid="uid://dnu1kjedr5ibs"]
 
 [ext_resource type="Script" path="res://main_menu/main_menu.gd" id="1_fw2vf"]
+[ext_resource type="Texture2D" uid="uid://bapcw4bqwgvp4" path="res://assets/main_menu/menu_screen.png" id="2_qbtj4"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -16,6 +17,7 @@ metadata/_edit_lock_ = true
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+texture = ExtResource("2_qbtj4")
 stretch_mode = 2
 metadata/_edit_lock_ = true
 
@@ -23,20 +25,20 @@ metadata/_edit_lock_ = true
 layout_direction = 1
 layout_mode = 2
 offset_left = 487.0
-offset_top = 88.0
-offset_right = 614.0
+offset_top = 90.0
+offset_right = 835.0
 offset_bottom = 132.0
 
 [node name="Title" type="Label" parent="Title"]
 layout_direction = 1
 layout_mode = 2
-text = "Mobile Supreme"
+text = "Bubble Commandos"
 
 [node name="MenuHolder" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 65.0
+offset_left = 1018.0
 offset_top = 483.0
-offset_right = 171.0
+offset_right = 1097.0
 offset_bottom = 619.0
 
 [node name="MenuItems" type="VBoxContainer" parent="MenuHolder"]
