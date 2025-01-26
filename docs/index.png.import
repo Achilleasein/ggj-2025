@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bd4w5u8f1cbp4"
-path="res://.godot/imported/Buble-commandos.icon.png-17821ae0dca6bdd95c9839535ca3a22a.ctex"
+uid="uid://v3xsobsggssg"
+path="res://.godot/imported/index.png-0c78d14d192abe5f22f8c25928ca1ab8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://docs/Buble-commandos.icon.png"
-dest_files=["res://.godot/imported/Buble-commandos.icon.png-17821ae0dca6bdd95c9839535ca3a22a.ctex"]
+source_file="res://docs/index.png"
+dest_files=["res://.godot/imported/index.png-0c78d14d192abe5f22f8c25928ca1ab8.ctex"]
 
 [params]
 

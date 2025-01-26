@@ -4,20 +4,20 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1737882057|3438576600';
+const CACHE_VERSION = '1737899472|20853973453';
 /** @type {string} */
 const CACHE_PREFIX = 'Buble-commandos-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
 /** @type {string} */
-const OFFLINE_URL = 'Buble-commandos.offline.html';
+const OFFLINE_URL = 'index.offline.html';
 /** @type {boolean} */
 const ENSURE_CROSSORIGIN_ISOLATION_HEADERS = true;
 // Files that will be cached on load.
 /** @type {string[]} */
-const CACHED_FILES = ["Buble-commandos.html","Buble-commandos.js","Buble-commandos.offline.html","Buble-commandos.icon.png","Buble-commandos.apple-touch-icon.png","Buble-commandos.worker.js","Buble-commandos.audio.worklet.js"];
+const CACHED_FILES = ["index.html","index.js","index.offline.html","index.icon.png","index.apple-touch-icon.png","index.worker.js","index.audio.worklet.js"];
 // Files that we might not want the user to preload, and will only be cached on first load.
 /** @type {string[]} */
-const CACHABLE_FILES = ["Buble-commandos.wasm","Buble-commandos.pck"];
+const CACHABLE_FILES = ["index.wasm","index.pck"];
 const FULL_CACHE = CACHED_FILES.concat(CACHABLE_FILES);
 
 self.addEventListener('install', (event) => {
