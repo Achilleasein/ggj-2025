@@ -8,6 +8,7 @@ extends CharacterBody2D
 var player: Node2D
 var bullet_scene: PackedScene
 var can_shoot = true
+var health = 5
 
 func _ready():
 	player = get_tree().get_root().get_node("res://Bubble_Main/Bubble.tscn")
@@ -43,3 +44,8 @@ func shoot():
 	bullet.rotation = direction_to_player.angle()
 	if bullet.has_method("set_direction"):
 		bullet.set_direction(direction_to_player)
+
+func take_damage():
+	health -= 1
+	if health == 0 :
+		queue_free()

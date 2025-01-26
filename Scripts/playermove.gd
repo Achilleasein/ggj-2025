@@ -6,6 +6,7 @@ extends CharacterBody2D
 #reference to the bullet scene
 var bullet = preload("res://Bubble_Main/bullet.tscn")
 var can_shoot = true
+var health = 3
 
 func _physics_process(_delta: float):
 	# Movement input
@@ -45,3 +46,8 @@ func shoot():
 		can_shoot= false
 		await get_tree().create_timer(fire_rate).timeout
 		can_shoot= true
+
+func take_damage():
+	health -=1 
+	if health == 0:
+		queue_free()
