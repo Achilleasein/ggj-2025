@@ -51,3 +51,8 @@ func take_damage():
 	health -=1 
 	if health == 0:
 		queue_free()
+
+
+func _on_area_2d_body_entered(body: CharacterBody2D):
+	if body.is_in_group("enemy"):
+		take_damage()

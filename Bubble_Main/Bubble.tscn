@@ -1,16 +1,55 @@
-[gd_scene load_steps=4 format=3 uid="uid://cbgkvpk4l2rgc"]
+[gd_scene load_steps=12 format=3 uid="uid://cbgkvpk4l2rgc"]
 
 [ext_resource type="Script" path="res://Scripts/playermove.gd" id="1_inceh"]
 [ext_resource type="Texture2D" uid="uid://dn6df66k7axp3" path="res://Images/buuble.png" id="2_4jpvu"]
+[ext_resource type="Texture2D" uid="uid://pe82t226l53s" path="res://Images/bubble animation/000.png" id="3_ey20n"]
+[ext_resource type="Texture2D" uid="uid://gic85h7lilbt" path="res://Images/bubble animation/001.png" id="4_atadf"]
+[ext_resource type="Texture2D" uid="uid://grygk4kax2a8" path="res://Images/bubble animation/002.png" id="5_tiv0s"]
+[ext_resource type="Texture2D" uid="uid://b7enn74d5xu5i" path="res://Images/bubble animation/003.png" id="6_yxqk5"]
+[ext_resource type="Texture2D" uid="uid://b2nvx7q1x6aam" path="res://Images/bubble animation/004.png" id="7_qf1c5"]
+[ext_resource type="Texture2D" uid="uid://c1nebtlguo7v0" path="res://Images/bubble animation/005.png" id="8_gul3i"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_obl68"]
 radius = 53.0377
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_58vfe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ey20n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_atadf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tiv0s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_yxqk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qf1c5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_gul3i")
+}],
+"loop": true,
+"name": &"Move",
+"speed": 7.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uqewh"]
+radius = 54.0
+
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 2
 script = ExtResource("1_inceh")
+speed = 250.0
+fire_rate = 0.2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+z_index = 100
 scale = Vector2(0.992, 1)
 texture = ExtResource("2_4jpvu")
 
@@ -24,4 +63,15 @@ shape = SubResource("CircleShape2D_obl68")
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(0, -59)
 
+[node name="Bubble Animation" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_58vfe")
+animation = &"Move"
+autoplay = "Move"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_uqewh")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
