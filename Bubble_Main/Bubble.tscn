@@ -16,6 +16,8 @@ texture = ExtResource("2_4jpvu")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_obl68")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Marker2D" type="Marker2D" parent="."]
