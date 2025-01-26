@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1737880383|1765394348';
+const CACHE_VERSION = '1737882057|3438576600';
 /** @type {string} */
 const CACHE_PREFIX = 'Buble-commandos-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
