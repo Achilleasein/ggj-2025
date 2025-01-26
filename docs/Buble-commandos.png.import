@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6idmg7ndgy8l"
-path="res://.godot/imported/Buble-commandos.apple-touch-icon.png-90f381102a678e53e6a6379e84378dfa.ctex"
+uid="uid://drx6ygern337e"
+path="res://.godot/imported/Buble-commandos.png-02e3303a0416aa302991b790b32a9110.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://export/Buble-commandos.apple-touch-icon.png"
-dest_files=["res://.godot/imported/Buble-commandos.apple-touch-icon.png-90f381102a678e53e6a6379e84378dfa.ctex"]
+source_file="res://docs/Buble-commandos.png"
+dest_files=["res://.godot/imported/Buble-commandos.png-02e3303a0416aa302991b790b32a9110.ctex"]
 
 [params]
 
