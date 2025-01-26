@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<<< Updated upstream:Images/bubble animation/005.png.import
 uid="uid://c1nebtlguo7v0"
 path="res://.godot/imported/005.png-5e09ca7dbf1d0ca57d1253b4ea8b9759.ctex"
+========
+uid="uid://bmawsj7mhm8si"
+path="res://.godot/imported/001.png-59e17bdae286452c896d3db824c04111.ctex"
+>>>>>>>> Stashed changes:Images/bubble animation/001.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<<< Updated upstream:Images/bubble animation/005.png.import
 source_file="res://Images/bubble animation/005.png"
 dest_files=["res://.godot/imported/005.png-5e09ca7dbf1d0ca57d1253b4ea8b9759.ctex"]
+========
+source_file="res://Images/bubble animation/001.png"
+dest_files=["res://.godot/imported/001.png-59e17bdae286452c896d3db824c04111.ctex"]
+>>>>>>>> Stashed changes:Images/bubble animation/001.png.import
 
 [params]
 
