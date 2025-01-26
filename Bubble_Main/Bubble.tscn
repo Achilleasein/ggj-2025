@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://Scripts/playermove.gd" id="1_inceh"]
 [ext_resource type="Texture2D" uid="uid://dn6df66k7axp3" path="res://Images/buuble.png" id="2_4jpvu"]
-[ext_resource type="Texture2D" uid="uid://pe82t226l53s" path="res://Images/bubble animation/000.png" id="3_ey20n"]
-[ext_resource type="Texture2D" uid="uid://gic85h7lilbt" path="res://Images/bubble animation/001.png" id="4_atadf"]
-[ext_resource type="Texture2D" uid="uid://grygk4kax2a8" path="res://Images/bubble animation/002.png" id="5_tiv0s"]
-[ext_resource type="Texture2D" uid="uid://b7enn74d5xu5i" path="res://Images/bubble animation/003.png" id="6_yxqk5"]
+[ext_resource type="Texture2D" uid="uid://dlk20qi1ax2jt" path="res://Images/bubble animation/000.png" id="3_ey20n"]
+[ext_resource type="Texture2D" uid="uid://b5kbs1friji1u" path="res://Images/bubble animation/001.png" id="4_atadf"]
+[ext_resource type="Texture2D" uid="uid://dm3upshes5w54" path="res://Images/bubble animation/002.png" id="5_tiv0s"]
+[ext_resource type="Texture2D" uid="uid://cbnhjfkgyuy28" path="res://Images/bubble animation/003.png" id="6_yxqk5"]
 [ext_resource type="Texture2D" uid="uid://b2nvx7q1x6aam" path="res://Images/bubble animation/004.png" id="7_qf1c5"]
 [ext_resource type="Texture2D" uid="uid://c1nebtlguo7v0" path="res://Images/bubble animation/005.png" id="8_gul3i"]
 

@@ -53,6 +53,6 @@ func take_damage():
 		queue_free()
 
 
-func _on_area_2d_body_entered(body: CharacterBody2D):
+func _on_area_2d_body_entered(body: Node):
 	if body.is_in_group("enemy"):
 		take_damage()
