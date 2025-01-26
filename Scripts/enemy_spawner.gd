@@ -10,7 +10,6 @@ func _ready():
 	player = get_node("/root/FirstLevel/Player")
 	start_spawning()
 
-
 func start_spawning():
 	var spawn_timer = Timer.new()
 	spawn_timer.wait_time = spawn_interval
