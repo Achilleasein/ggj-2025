@@ -8,7 +8,7 @@ var player: CharacterBody2D
 func _ready():
 	player = get_tree().get_root().get_node("res://Bubble_Main/Bubble.tscn")
 	start_spawning()
-	
+
 
 func start_spawning():
 	var spawn_timer = Timer.new()
