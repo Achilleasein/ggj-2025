@@ -10,6 +10,8 @@ var bullet_scene: PackedScene
 var can_shoot = true
 var health = 5
 
+#var player = preload("res://Bubble_Main/Bubble.tscn").instantiate()
+
 func _ready():
 	player = get_tree().get_root().get_node("res://Bubble_Main/Bubble.tscn")
 	bullet_scene = preload("res://Bubble_Main/enemy_bullet.tscn")
@@ -42,8 +44,7 @@ func shoot():
 	bullet.global_position = global_position
 	var direction_to_player = (player.global_position - global_position).normalized()
 	bullet.rotation = direction_to_player.angle()
-	if bullet.has_method("set_direction"):
-		bullet.set_direction(direction_to_player)
+	bullet.direction = direction_to_player
 
 func take_damage():
 	health -= 1

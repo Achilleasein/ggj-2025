@@ -6,7 +6,7 @@ extends CharacterBody2D
 #reference to the bullet scene
 var bullet = preload("res://Bubble_Main/bullet.tscn")
 var can_shoot = true
-var health = 3
+var health = 30
 
 func _physics_process(_delta: float):
 	# Movement input
@@ -51,3 +51,8 @@ func take_damage():
 	health -=1 
 	if health == 0:
 		queue_free()
+
+
+func _on_area_2d_body_entered(body: CharacterBody2D):
+	if body.is_in_group("Enemy"):
+		take_damage()

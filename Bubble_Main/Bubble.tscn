@@ -2,6 +2,12 @@
 
 [ext_resource type="Script" path="res://Scripts/playermove.gd" id="1_inceh"]
 [ext_resource type="Texture2D" uid="uid://dn6df66k7axp3" path="res://Images/buuble.png" id="2_4jpvu"]
+[ext_resource type="Texture2D" uid="uid://j8rcsy8pludw" path="res://Images/bubble animation/000.png" id="3_ey20n"]
+[ext_resource type="Texture2D" uid="uid://c78q0j2ok4" path="res://Images/bubble animation/001.png" id="4_atadf"]
+[ext_resource type="Texture2D" uid="uid://cd4vptlemi586" path="res://Images/bubble animation/002.png" id="5_tiv0s"]
+[ext_resource type="Texture2D" uid="uid://b7enn74d5xu5i" path="res://Images/bubble animation/003.png" id="6_yxqk5"]
+[ext_resource type="Texture2D" uid="uid://b3o76g0jqj8i3" path="res://Images/bubble animation/004.png" id="7_qf1c5"]
+[ext_resource type="Texture2D" uid="uid://dbclptt48pvjr" path="res://Images/bubble animation/005.png" id="8_gul3i"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_obl68"]
 radius = 53.0377
