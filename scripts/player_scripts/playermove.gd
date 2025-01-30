@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var fire_rate: float = 0.1 #Time between shots taken
 @export var muzzle_distance: float = 65.0 #Distance of the muzzle (Marker2D from the player_
 #reference to the bullet scene
-var bullet = preload("res://Bubble_Main/bullet.tscn")
+var bullet = preload("res://scenes/bubble_main/bullet.tscn")
 var can_shoot = true
 var health = 30
 

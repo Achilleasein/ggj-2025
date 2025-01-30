@@ -1,10 +1,10 @@
 [gd_scene load_steps=21 format=4 uid="uid://dhpuv2df1u3yt"]
 
-[ext_resource type="Script" path="res://Scripts/first_level/wall_scripts.gd" id="3_83o2t"]
-[ext_resource type="PackedScene" uid="uid://cbgkvpk4l2rgc" path="res://Bubble_Main/Bubble.tscn" id="3_fxm5x"]
+[ext_resource type="Script" path="res://scripts/first_level/wall_scripts.gd" id="3_83o2t"]
+[ext_resource type="PackedScene" uid="uid://cbgkvpk4l2rgc" path="res://scenes/bubble_main/Bubble.tscn" id="3_fxm5x"]
 [ext_resource type="Texture2D" uid="uid://dy0j8k6d1potd" path="res://assets/first_level/bubbly_terrains.png" id="3_tkge3"]
-[ext_resource type="PackedScene" uid="uid://c5h7njwrvtydd" path="res://Bubble_Main/enemy_spawner.tscn" id="4_uvn54"]
-[ext_resource type="PackedScene" uid="uid://bly6ccc7h6678" path="res://Bubble_Main/enemy.tscn" id="5_7ih2k"]
+[ext_resource type="PackedScene" uid="uid://c5h7njwrvtydd" path="res://scenes/enemy_scenes/enemy_spawner.tscn" id="4_uvn54"]
+[ext_resource type="PackedScene" uid="uid://bly6ccc7h6678" path="res://scenes/enemy_scenes/enemy.tscn" id="5_7ih2k"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_i2hco"]
 tile_data = PackedInt32Array(0, 2097152, 33, 65536, 2097152, 34, 131072, 2097152, 35, 196608, 2097152, 36, 262144, 2097152, 37, 327680, 2097152, 38, 393216, 2097152, 39, 1, 2162688, 33, 65537, 2162688, 34, 131073, 2162688, 35, 196609, 2162688, 36, 262145, 2162688, 37, 327681, 2162688, 38, 393217, 2162688, 39, 2, 2228224, 33, 65538, 2228224, 34, 131074, 2228224, 35, 196610, 2228224, 36, 262146, 2228224, 37, 327682, 2228224, 38, 393218, 2228224, 39, 3, 2293760, 33, 65539, 2293760, 34, 131075, 2293760, 35, 196611, 2293760, 36, 262147, 2293760, 37, 327683, 2293760, 38, 393219, 2293760, 39, 4, 2359296, 33, 65540, 2359296, 34, 131076, 2359296, 35, 196612, 2359296, 36, 262148, 2359296, 37, 327684, 2359296, 38, 393220, 2359296, 39, 5, 2424832, 33, 65541, 2424832, 34, 131077, 2424832, 35, 196613, 2424832, 36, 262149, 2424832, 37, 327685, 2424832, 38, 393221, 2424832, 39, 6, 2490368, 33, 65542, 2490368, 34, 131078, 2490368, 35, 196614, 2490368, 36, 262150, 2490368, 37, 327686, 2490368, 38, 393222, 2490368, 39, 7, 2555904, 33, 65543, 2555904, 34, 131079, 2555904, 35, 196615, 2555904, 36, 262151, 2555904, 37, 327687, 2555904, 38, 393223, 2555904, 39)

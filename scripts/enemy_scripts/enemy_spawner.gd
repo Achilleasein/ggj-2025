@@ -27,7 +27,7 @@ func _spawn_enemy():
 		spawn_position.x += spawn_distance
 	else:
 		spawn_position.x -= spawn_distance
-	var enemy = enemy_scene.instantiate()
+	var enemy = enemy_scene.instantwiate()
 	enemy.global_position = spawn_position
 	if spawn_side and enemy.has_node("Sprite2D"):
 		enemy.get_node("Sprite2D").flip_h = true

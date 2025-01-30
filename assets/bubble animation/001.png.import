@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dn6df66k7axp3"
-path="res://.godot/imported/buuble.png-9f112a3884c5bbfb825bf92bfed07c61.ctex"
+uid="uid://cphnag7u3oino"
+path="res://.godot/imported/001.png-7f779700419d3a61f9dff82857e89d84.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/buuble.png"
-dest_files=["res://.godot/imported/buuble.png-9f112a3884c5bbfb825bf92bfed07c61.ctex"]
+source_file="res://assets/bubble animation/001.png"
+dest_files=["res://.godot/imported/001.png-7f779700419d3a61f9dff82857e89d84.ctex"]
 
 [params]
 
