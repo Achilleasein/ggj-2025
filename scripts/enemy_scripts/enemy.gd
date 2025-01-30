@@ -3,8 +3,7 @@ extends CharacterBody2D
 @export var speed : float = 75.0 
 @export var fire_rate_range : Vector2 = Vector2(1.0, 3.0)
 @export var random_movement_offset : float = 0.5
-@export var bullet_scene_path : String = "res://Bubble_Main/enemy_bullet.tscn"
-#@export var player_path: NodePath
+@export var bullet_scene_path : String = "res://scenes/enemy_scenes/enemy_bullet.tscn"
 
 @onready var player = get_parent().get_node("Player")
 
@@ -12,10 +11,7 @@ var bullet_scene: PackedScene
 var can_shoot = true
 var health = 5
 
-#var player = preload("res://Bubble_Main/Bubble.tscn").instantiate()
-
 func _ready():
-	player = get_node("/root/FirstLevel/Player")
 	bullet_scene = preload("res://scenes/enemy_scenes/enemy_bullet.tscn")
 
 func _physics_process(_delta: float):

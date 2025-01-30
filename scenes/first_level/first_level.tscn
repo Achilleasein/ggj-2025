@@ -1,9 +1,9 @@
-[gd_scene load_steps=22 format=4 uid="uid://dhpuv2df1u3yt"]
+[gd_scene load_steps=23 format=4 uid="uid://dhpuv2df1u3yt"]
 
-[ext_resource type="Script" path="res://Scripts/first_level.gd" id="1_ifnt6"]
-[ext_resource type="Script" path="res://Scripts/first_level/wall_scripts.gd" id="3_83o2t"]
-[ext_resource type="PackedScene" uid="uid://cbgkvpk4l2rgc" path="res://Bubble_Main/Bubble.tscn" id="3_fxm5x"]
+[ext_resource type="Script" path="res://scripts/enemy_scripts/first_level.gd" id="1_ifnt6"]
+[ext_resource type="PackedScene" uid="uid://cbgkvpk4l2rgc" path="res://scenes/bubble_main/Bubble.tscn" id="3_fxm5x"]
 [ext_resource type="Texture2D" uid="uid://dy0j8k6d1potd" path="res://assets/first_level/bubbly_terrains.png" id="3_tkge3"]
+[ext_resource type="Script" path="res://scripts/player_scripts/playermove.gd" id="4_on21j"]
 [ext_resource type="PackedScene" uid="uid://c5h7njwrvtydd" path="res://scenes/enemy_scenes/enemy_spawner.tscn" id="4_uvn54"]
 [ext_resource type="PackedScene" uid="uid://bly6ccc7h6678" path="res://scenes/enemy_scenes/enemy.tscn" id="5_7ih2k"]
 
@@ -1185,6 +1185,18 @@ pattern_1 = SubResource("TileMapPattern_hheov")
 pattern_2 = SubResource("TileMapPattern_orphv")
 pattern_3 = SubResource("TileMapPattern_fbc4a")
 
+[sub_resource type="GDScript" id="GDScript_xjrll"]
+script/source = "extends StaticBody2D
+
+var health = 1000000
+
+func take_damage():
+	health -=1
+	health += 1
+	if health == 0:
+		queue_free()
+"
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tel5q"]
 size = Vector2(2432, 85)
 
@@ -1207,7 +1219,7 @@ tile_set = SubResource("TileSet_hy2ro")
 [node name="TopRocksBody" type="StaticBody2D" parent="."]
 position = Vector2(-368, -416)
 collision_layer = 3
-script = ExtResource("3_83o2t")
+script = SubResource("GDScript_xjrll")
 
 [node name="TopRocksColision" type="CollisionShape2D" parent="TopRocksBody"]
 position = Vector2(712, 27)
@@ -1216,7 +1228,7 @@ shape = SubResource("RectangleShape2D_tel5q")
 [node name="BottomRocksBody" type="StaticBody2D" parent="."]
 position = Vector2(-368, -416)
 collision_layer = 3
-script = ExtResource("3_83o2t")
+script = SubResource("GDScript_xjrll")
 
 [node name="BottomRocksColision" type="CollisionShape2D" parent="BottomRocksBody"]
 position = Vector2(712, 1128)
@@ -1225,7 +1237,7 @@ shape = SubResource("RectangleShape2D_tel5q")
 [node name="LeftRocksBody" type="StaticBody2D" parent="."]
 position = Vector2(-824, 120)
 collision_layer = 3
-script = ExtResource("3_83o2t")
+script = SubResource("GDScript_xjrll")
 
 [node name="LeftColisionShape" type="CollisionShape2D" parent="LeftRocksBody"]
 position = Vector2(19, 40)
@@ -1234,7 +1246,7 @@ shape = SubResource("RectangleShape2D_weon8")
 [node name="RightRocksBody" type="StaticBody2D" parent="."]
 position = Vector2(-824, 120)
 collision_layer = 3
-script = ExtResource("3_83o2t")
+script = SubResource("GDScript_xjrll")
 
 [node name="RightColisionShape" type="CollisionShape2D" parent="RightRocksBody"]
 position = Vector2(2312, 40)
@@ -1242,6 +1254,7 @@ shape = SubResource("RectangleShape2D_weon8")
 
 [node name="Player" parent="." instance=ExtResource("3_fxm5x")]
 position = Vector2(0, 1)
+script = ExtResource("4_on21j")
 
 [node name="Enemy_spawner" parent="." instance=ExtResource("4_uvn54")]
 position = Vector2(-834.114, -402.802)

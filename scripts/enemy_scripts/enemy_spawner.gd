@@ -2,7 +2,6 @@ extends Node2D
 @export var enemy_scene: PackedScene
 @export var spawn_distance : float = 350.0 #Distance from player to spawn
 @export var spawn_interval : float = 2.0 #Time between enemy spawns
-#@export var player_path: NodePath
 
 @onready var player = get_parent().get_node("Player")
 
