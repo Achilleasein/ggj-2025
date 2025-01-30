@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://p1ibv7vaql0d"]
 
-[ext_resource type="Texture2D" uid="uid://coac1xhrjgu3d" path="res://Images/bubble bullet.png" id="1_ru4uk"]
-[ext_resource type="Script" path="res://Scripts/bullet.gd" id="2_mggxi"]
+[ext_resource type="Texture2D" uid="uid://coac1xhrjgu3d" path="res://assets/bubble animation/bubble bullet.png" id="1_ru4uk"]
+[ext_resource type="Script" path="res://scripts/player_scripts/bullet.gd" id="2_mggxi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_47815"]
 radius = 23.1325

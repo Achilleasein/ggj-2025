@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bly6ccc7h6678"]
 
-[ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_ltq2l"]
-[ext_resource type="Texture2D" uid="uid://b00vnmjoqatdf" path="res://Images/mud enemy.png" id="2_0wouy"]
+[ext_resource type="Script" path="res://scripts/enemy_scripts/enemy.gd" id="1_ltq2l"]
+[ext_resource type="Texture2D" uid="uid://b00vnmjoqatdf" path="res://assets/muddy/mud enemy.png" id="2_0wouy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_q846n"]
 radius = 50.01

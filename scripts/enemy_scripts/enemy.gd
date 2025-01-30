@@ -13,7 +13,7 @@ var health = 5
 
 func _ready():
 	player = get_node("/root/FirstLevel/Player")
-	bullet_scene = preload("res://Bubble_Main/enemy_bullet.tscn")
+	bullet_scene = preload("res://scenes/enemy_scenes/enemy_bullet.tscn")
 
 func _physics_process(_delta: float):
 	if player:

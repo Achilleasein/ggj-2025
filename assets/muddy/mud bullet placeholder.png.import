@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctcafgnysowcr"
-path="res://.godot/imported/004.png-a48a25ff1a01c1d498d5831fe9be20cf.ctex"
+uid="uid://ckr7glknhl3ob"
+path="res://.godot/imported/mud bullet placeholder.png-23da589b382412a2c8fc80d0f412097d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/bubble animation/004.png"
-dest_files=["res://.godot/imported/004.png-a48a25ff1a01c1d498d5831fe9be20cf.ctex"]
+source_file="res://assets/muddy/mud bullet placeholder.png"
+dest_files=["res://.godot/imported/mud bullet placeholder.png-23da589b382412a2c8fc80d0f412097d.ctex"]
 
 [params]
 
