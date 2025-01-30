@@ -6,7 +6,8 @@ extends CharacterBody2D
 @export var bullet_scene_path : String = "res://Bubble_Main/enemy_bullet.tscn"
 #@export var player_path: NodePath
 
-var player: Node2D
+@onready var player = get_parent().get_node("Player")
+
 var bullet_scene: PackedScene
 var can_shoot = true
 var health = 5
@@ -18,10 +19,12 @@ func _ready():
 	bullet_scene = preload("res://scenes/enemy_scenes/enemy_bullet.tscn")
 
 func _physics_process(_delta: float):
-	if player:
+	if get_parent().is_player_alive == true:
 		move_towards_player_with_randomness()
 		if can_shoot:
 			shoot_randomly()
+	else:
+		pass
 
 func move_towards_player_with_randomness():
 	var target_direction = (player.global_position - global_position).normalized()
@@ -31,8 +34,6 @@ func move_towards_player_with_randomness():
 	move_and_slide()
 
 func shoot_randomly():
-	if not player or not bullet_scene:
-		return
 	can_shoot = false
 	shoot()
 	var random_time = randf_range(fire_rate_range.x,fire_rate_range.y)

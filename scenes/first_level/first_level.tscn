@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://dhpuv2df1u3yt"]
+[gd_scene load_steps=22 format=4 uid="uid://dhpuv2df1u3yt"]
 
 [ext_resource type="Script" path="res://scripts/first_level/wall_scripts.gd" id="3_83o2t"]
 [ext_resource type="PackedScene" uid="uid://cbgkvpk4l2rgc" path="res://scenes/bubble_main/Bubble.tscn" id="3_fxm5x"]
@@ -1191,6 +1191,7 @@ size = Vector2(2432, 85)
 size = Vector2(58, 1008)
 
 [node name="FirstLevel" type="Node2D"]
+script = ExtResource("1_ifnt6")
 
 [node name="BubblyTilesContainer" type="Node2D" parent="."]
 
@@ -1243,5 +1244,4 @@ position = Vector2(0, 1)
 
 [node name="Enemy_spawner" parent="." instance=ExtResource("4_uvn54")]
 position = Vector2(-834.114, -402.802)
-
-[node name="MudEnemy" parent="." instance=ExtResource("5_7ih2k")]
+enemy_scene = ExtResource("5_7ih2k")
