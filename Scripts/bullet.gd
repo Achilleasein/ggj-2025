@@ -18,5 +18,5 @@ func _on_area_2d_body_entered(body):
 	if body.name !='Player':
 		set_process(false)
 		body.take_damage()
-		await get_tree().create_timer(0.2).timeout
+		await get_tree().create_timer(0.05).timeout
 		queue_free()

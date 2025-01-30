@@ -704,3 +704,5 @@ shape = SubResource("RectangleShape2D_weon8")
 [node name="Enemy_spawner" parent="." instance=ExtResource("5_pmy7k")]
 enemy_scene = ExtResource("6_d3j1x")
 spawn_distance = 500.0
+
+[node name="MudEnemy" parent="." instance=ExtResource("6_d3j1x")]

@@ -6,7 +6,8 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_q846n"]
 radius = 50.01
 
-[node name="MudEnemy" type="CharacterBody2D"]
+[node name="MudEnemy" type="CharacterBody2D" groups=["Enemy"]]
+z_index = 100
 collision_layer = 2
 script = ExtResource("1_ltq2l")
 
