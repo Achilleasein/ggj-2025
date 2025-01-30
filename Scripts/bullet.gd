@@ -15,7 +15,7 @@ func _on_visible_on_screen_notifier_2d_screen_exited():
 	queue_free()
 
 func _on_area_2d_body_entered(body):
-	if body.name !='Player':
+	if body.name !='player':
 		set_process(false)
 		body.take_damage()
 		await get_tree().create_timer(0.05).timeout
