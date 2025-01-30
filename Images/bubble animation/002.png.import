@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< Updated upstream:scenes/first_level/bubbly_terrains.png.import
-uid="uid://dlihvc3rv0il"
-path="res://.godot/imported/bubbly_terrains.png-f5cba7c7915d07be795b8666524123f0.ctex"
-========
-uid="uid://74hpto2k53im"
+uid="uid://defrvwxcmbld6"
 path="res://.godot/imported/002.png-a0dcd2601d97932e3216402d7d5144fd.ctex"
->>>>>>>> Stashed changes:Images/bubble animation/002.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< Updated upstream:scenes/first_level/bubbly_terrains.png.import
-source_file="res://scenes/first_level/bubbly_terrains.png"
-dest_files=["res://.godot/imported/bubbly_terrains.png-f5cba7c7915d07be795b8666524123f0.ctex"]
-========
 source_file="res://Images/bubble animation/002.png"
 dest_files=["res://.godot/imported/002.png-a0dcd2601d97932e3216402d7d5144fd.ctex"]
->>>>>>>> Stashed changes:Images/bubble animation/002.png.import
 
 [params]
 
