@@ -5,8 +5,6 @@ extends Control
 func _ready() -> void:
 	$MenuHolder/MenuItems/Start.grab_focus()
 
-#func _process(delta: float) -> void:
-	#pass
 
 func _on_Start_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/first_level/first_level.tscn")

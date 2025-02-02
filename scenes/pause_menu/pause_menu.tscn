@@ -3,18 +3,28 @@
 [ext_resource type="Script" path="res://scenes/pause_menu/pause_menu.gd" id="1_i2vxf"]
 
 [node name="PauseMenu" type="Control"]
+process_mode = 3
 layout_mode = 3
-anchors_preset = 0
-offset_right = 1472.0
-offset_bottom = 680.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_i2vxf")
 
 [node name="PauseMenuItems" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 496.0
-offset_top = 208.0
-offset_right = 747.0
-offset_bottom = 309.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.5
+offset_top = -50.5
+offset_right = 125.5
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Resume" type="Button" parent="PauseMenuItems"]
 layout_mode = 2

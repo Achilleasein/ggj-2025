@@ -3,11 +3,14 @@ extends Node2D
 @export var safe_radius : float = 350.0 #Distance from player to spawn
 @export var spawn_interval : float = 2.0 #Time between enemy spawns
 
-@onready var player = get_parent().get_node("Player")
+
 @onready var spawn_area = get_parent().get_node("SpawnArea/CollisionPolygon2D")
 
+var player
 
 func _ready():
+	await get_parent().ready
+	player = get_parent().get_node("Player")
 	start_spawning()
 
 
