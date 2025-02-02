@@ -1,0 +1,46 @@
+name: Build and Deploy Godot Game
+
+on:
+  push:
+    branches:
+      - main  # Change to your default branch if necessary
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checkout the repository
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Cache Godot export templates
+    - name: Cache Godot export templates
+      uses: actions/cache@v3
+      with:
+        path: ~/.local/share/godot/templates
+        key: ${{ runner.os }}-godot-templates-${{ hashFiles('project.godot') }}
+
+    # Download Godot Engine
+    - name: Download Godot
+      env:
+        GODOT_VERSION: "4.3.0"  # Replace with your desired version
+      run: |
+        wget https://downloads.tuxfamily.org/godotengine/${GODOT_VERSION}/Godot_v${GODOT_VERSION}-stable_linux_headless.64.zip -O godot.zip
+        unzip godot.zip -d godot
+        chmod +x godot/Godot*
+
+    # Export the game to HTML5
+    - name: Export HTML5
+      env:
+        GODOT_PROJECT_PATH: .
+      run: |
+        mkdir -p export/html5
+        ./godot/Godot* --headless --export-release HTML5 build/html5/index.html
+
+    # Deploy to GitHub Pages
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GH_PAGES_TOKEN }}
+        publish_dir: build/html5
