@@ -6,7 +6,7 @@ extends CharacterBody2D
 #reference to the bullet scene
 var bullet = preload("res://scenes/bubble_main/bullet.tscn")
 var can_shoot = true
-var health = 3
+var health = 300
 
 func _physics_process(_delta: float):
 	# Movement input
