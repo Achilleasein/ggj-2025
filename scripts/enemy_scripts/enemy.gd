@@ -17,6 +17,7 @@ func _ready():
 func _physics_process(_delta: float):
 	if get_parent().is_player_alive == true:
 		move_towards_player_with_randomness()
+		update_sprite_direction()
 		if can_shoot:
 			shoot_randomly()
 	else:
@@ -28,6 +29,13 @@ func move_towards_player_with_randomness():
 	target_direction += random_offset
 	velocity = target_direction.normalized() * speed
 	move_and_slide()
+
+func update_sprite_direction():
+	if player.global_position.x < global_position.x:
+		get_node("Sprite2D").flip_h = true
+	else:
+		get_node("Sprite2D").flip_h = false
+
 
 func shoot_randomly():
 	can_shoot = false
