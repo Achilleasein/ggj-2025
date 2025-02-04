@@ -4,6 +4,8 @@ extends CharacterBody2D
 @export var fire_rate: float = 0.1 #Time between shots taken
 @export var muzzle_distance: float = 65.0 #Distance of the muzzle (Marker2D from the player_
 #reference to the bullet scene
+
+
 var bullet = preload("res://scenes/bubble_main/bullet.tscn")
 var can_shoot = true
 var health = 3
@@ -47,9 +49,9 @@ func shoot():
 		await get_tree().create_timer(fire_rate).timeout
 		can_shoot= true
 
-func take_damage():
-	health -=1 
-	if health == 0:
+func take_damage(damage):
+	health = max(health - damage, 0)
+	if health <= 0:
 		get_parent().is_player_alive = false
 		get_parent().pause_menu.player_died()
 		get_parent().remove_child(self)
@@ -57,4 +59,4 @@ func take_damage():
 
 func _on_area_2d_body_entered(body: CharacterBody2D):
 	if body.is_in_group("Enemy"):
-		take_damage()
+		take_damage(body.base_damage)

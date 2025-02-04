@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var fire_rate_range : Vector2 = Vector2(1.0, 3.0)
 @export var random_movement_offset : float = 0.5
 @export var bullet_scene_path : String = "res://scenes/enemy_scenes/enemy_bullet.tscn"
+@export var base_damage: int = 1
 
 @onready var player = get_parent().get_node("Player")
 
@@ -52,7 +53,7 @@ func shoot():
 	bullet.rotation = direction_to_player.angle()
 	bullet.direction = direction_to_player
 
-func take_damage():
-	health -= 1
-	if health == 0 :
+func take_damage(damage):
+	health = max(health - damage, 0)
+	if health <= 0 :
 		queue_free()
