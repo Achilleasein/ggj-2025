@@ -51,7 +51,7 @@ func take_damage():
 	health -=1 
 	if health == 0:
 		get_parent().is_player_alive = false
-		get_parent().pause_menu.visible = true
+		get_parent().pause_menu.player_died()
 		get_parent().remove_child(self)
 		queue_free()
 
